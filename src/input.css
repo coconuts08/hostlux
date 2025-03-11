@@ -1,0 +1,253 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #00754a;
+  --color-lightBlue: #021699;
+  --color-darkGray: #0265FF;
+  --color-Gray: #FE8832;
+  --color-dark: #1b1e1d;
+  --color-light: #ffffff;
+
+  --font-roboto: "Roboto", "sans-serif";
+}
+
+@layer base {
+  p,
+  li,
+  a {
+    @apply text-base;
+  }
+}
+
+@layer components {
+  .container {
+    @apply max-w-[90rem] p-4 w-full mx-auto place-content-center;
+  }
+
+  .header {
+    @apply bg-lightBlue shadow-md relative;
+  }
+
+  .branding {
+    @apply items-center gap-80 py-2 md:flex;
+  }
+
+  .branding img {
+    @apply w-200 ;
+  }
+
+  .header__wrapper {
+    @apply flex items-center justify-between;
+  }
+
+  .branding .header__navd {
+    @apply hidden md:flex md:gap-5 pl-10;
+  }
+
+  .branding .header__navd li a {
+    @apply font-normal text-sm text-light p-2;
+  }
+
+
+  .header__action {
+    @apply bg-light absolute top-[88px] right-0 w-0 h-[90vh] px-0 pt-0
+    overflow-hidden transition-all shadow-md z-50;
+  }
+
+  .header__action.open {
+    @apply w-[80%] px-10 pt-10 transition-all;
+  }
+
+  .header__action .header__navm {
+    @apply border-b-gray-400 border-b-[2px] pb-5;
+  }
+
+  .header__action .header__navm li:hover a {
+    @apply text-primary;
+  }
+
+  .header__action .header__navm li a {
+    @apply font-medium text-xl text-dark;
+  }
+
+  .header__action .header__btn a {
+    @apply flex gap-[1rem] items-center hover:text-primary;
+  }
+
+  .header__action .header__signIn {
+    @apply space-y-4 pt-2 md:flex md:flex-row gap-5;
+  }
+
+
+  /* Burger Menu */
+
+  .burger__menu {
+    @apply md:hidden;
+  }
+
+  .burger__menu span {
+    @apply w-[1.5rem] h-[.2rem] bg-gray-700 block rounded-full transition-all;
+  }
+
+  .burger__menu span:nth-child(2) {
+    @apply my-1;
+  }
+
+  .burger__menu.open span:first-child {
+    @apply transform translate-y-[9px] rotate-[225deg] transition-all;
+  }
+
+  .burger__menu.open span:nth-child(2) {
+    @apply opacity-0 transition-all;
+  }
+
+  .burger__menu.open span:last-child {
+    @apply transform translate-y-[-6px] rotate-[-225deg] transition-all;
+  }
+  /* LINKS */
+
+  .links {
+    @apply py-6 px-4 border-t-1 border-t-gray-300;
+  }
+  .links__wrapper {
+    @apply flex flex-col gap-5 md:grid md:grid-cols-6 md:pb-6;
+  }
+
+  .links__items ul {
+    @apply max-h-0 overflow-hidden transition-all flex flex-col gap-5 md:max-h-[50rem] md:pt-6;
+  }
+
+  .links__items ul.open {
+    @apply max-h-[50rem] transition-all pt-6;
+  }
+
+  .links__items h4 i.open {
+    @apply transform rotate-[180deg] transition-all;
+  }
+
+  .links__items ul li {
+    @apply text-darkGray hover:text-dark;
+  }
+
+  .links__items h4 {
+    @apply flex justify-between items-center md:font-bold md:text-[20px] md:pb-4;
+  }
+
+  .links__items ul {
+    @apply flex flex-col gap-4;
+  }
+
+  .links__items h4 i {
+    @apply md:invisible;
+  }
+
+  /* FOOTER */
+  .footer__socials ul li {
+    @apply flex gap-7 py-6;
+  }
+
+  .footer__socials ul li a i {
+    @apply text-2xl;
+  }
+
+  .copyright {
+    @apply flex flex-col gap-4 md:flex md:flex-row;
+  }
+
+  .info__wrapper{
+    @apply py-16 flex flex-col gap-10 md:gap-16;
+  }
+
+
+  .info__cards .info__cardcontents{
+  @apply flex flex-row gap-5 md:flex md:flex-col md:items-center md:text-center md:gap-10;
+}
+
+.info__number{
+  @apply text-primary border-1 rounded-full border-primary px-4 py-1 h-14 w-14
+  text-center text-4xl font-bold;
+}
+
+.info__cards{
+  @apply flex flex-col gap-9 md:grid md:grid-cols-3;
+}
+
+/* coffee */
+.menucoffee__nav{
+  @apply bg-lightBlue pt-10;
+}
+
+.menucoffee__nav h4{
+  @apply text-2xl font-semibold text-center;
+}
+
+.menucoffee__nav ul{
+  @apply flex items-center justify-center mt-6;
+}
+
+.menucoffee__nav ul li{
+  @apply px-4 pb-5 border-b-4 border-transparent;
+}
+
+.menucoffee__nav ul li.active{
+  @apply border-b-4 border-primary;
+}
+
+.menucoffee__nav ul li a{
+  @apply text-lg font-semibold
+}
+
+
+.coffee__tab{
+  @apply bg-lightBlue relative h-[500px] md:h-[290px];
+}
+
+.coffee__item{
+  @apply absolute opacity-0 transition-all top-8 px-4 md:grid md:grid-cols-2 md:items-center md:max-w-[50rem] md:left-[25%] md:place-self-center;
+}
+
+.coffee__item.active{
+  @apply opacity-100 transition-all;
+}
+
+
+.coffee__text h5{
+  @apply text-xl font-semibold text-center;
+}
+
+.coffee__text p{
+  @apply text-center;
+}
+.coffee__text{
+  @apply flex flex-col gap-4 mt-4;
+}
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+@layer utilities {
+  .btn-light {
+    @apply px-4 py-1 border-[1px] border-dark rounded-full text-base font-bold hover:bg-darkGray/10 max-w-[90px];
+  }
+
+  .btn-dark {
+    @apply text-white bg-darkGray px-4 py-1 border-[1px] border-none  inline-block text-center font-bold hover:bg-darkGray/10 max-w-[110px];
+  }
+  
+}
+
+
