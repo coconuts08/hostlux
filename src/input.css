@@ -3,10 +3,11 @@
 @theme {
   --color-primary: #00754a;
   --color-lightBlue: #021699;
-  --color-darkGray: #0265FF;
-  --color-Gray: #FE8832;
+  --color-lblue: #0265FF;
+  --color-orange: #FE8832;
   --color-dark: #1b1e1d;
   --color-light: #ffffff;
+  --color-light2: #f5f5f5;
 
   --font-roboto: "Roboto", "sans-serif";
 }
@@ -21,7 +22,7 @@
 
 @layer components {
   .container {
-    @apply max-w-[90rem] p-4 w-full mx-auto place-content-center;
+    @apply max-w-[90rem] p-4 w-full  mx-auto place-content-center;
   }
 
   .header {
@@ -41,25 +42,25 @@
   }
 
   .branding .header__navd {
-    @apply hidden md:flex md:gap-5 pl-10;
+    @apply hidden md:flex md:gap-10;
   }
 
   .branding .header__navd li a {
-    @apply font-normal text-sm text-light p-2;
+    @apply font-bold text-sm text-light;
   }
-
 
   .header__action {
     @apply bg-light absolute top-[88px] right-0 w-0 h-[90vh] px-0 pt-0
     overflow-hidden transition-all shadow-md z-50;
+    
   }
 
   .header__action.open {
-    @apply w-[80%] px-10 pt-10 transition-all;
+    @apply w-[100%] px-1 pt-10 transition-all;
   }
 
   .header__action .header__navm {
-    @apply border-b-gray-400 border-b-[2px] pb-5;
+    @apply border-b-orange-400 border-b-[2px] pb-5;
   }
 
   .header__action .header__navm li:hover a {
@@ -67,7 +68,7 @@
   }
 
   .header__action .header__navm li a {
-    @apply font-medium text-xl text-dark;
+    @apply font-medium text-xl text-dark border-b-dark;
   }
 
   .header__action .header__btn a {
@@ -86,7 +87,7 @@
   }
 
   .burger__menu span {
-    @apply w-[1.5rem] h-[.2rem] bg-gray-700 block rounded-full transition-all;
+    @apply w-[1.5rem] h-[.2rem] bg-light block rounded-full transition-all;
   }
 
   .burger__menu span:nth-child(2) {
@@ -107,7 +108,7 @@
   /* LINKS */
 
   .links {
-    @apply py-6 px-4 border-t-1 border-t-gray-300;
+    @apply py-6 px-4 border-t-1 border-t-orange-300;
   }
   .links__wrapper {
     @apply flex flex-col gap-5 md:grid md:grid-cols-6 md:pb-6;
@@ -126,7 +127,7 @@
   }
 
   .links__items ul li {
-    @apply text-darkGray hover:text-dark;
+    @apply text-lblue hover:text-dark;
   }
 
   .links__items h4 {
@@ -224,7 +225,13 @@
 
 
 
-
+/* cards ------*/
+.pricecards span{
+  @apply text-lblue font-bold;
+}
+.pricecards h2{
+  @apply font-normal;
+}
 
 }
 
@@ -241,11 +248,11 @@
 
 @layer utilities {
   .btn-light {
-    @apply px-4 py-1 border-[1px] border-dark rounded-full text-base font-bold hover:bg-darkGray/10 max-w-[90px];
+    @apply px-4 py-1 border-[1px] border-dark rounded-full text-base font-bold hover:bg-lblue/10 max-w-[90px];
   }
 
   .btn-dark {
-    @apply text-white bg-darkGray px-4 py-1 border-[1px] border-none  inline-block text-center font-bold hover:bg-darkGray/10 max-w-[110px];
+    @apply text-white bg-lblue px-4 py-1 border-[1px] border-none  inline-block text-center font-bold hover:bg-lblue/10 max-w-[110px];
   }
   
 }
