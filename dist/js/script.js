@@ -42,3 +42,32 @@ function removeActiveContent(){
 content.classList.remove("active");
   });
 }
+
+
+
+// slider
+
+const cursor = document.querySelector(".cursor");
+let mouseX = 0,
+  mouseY = 0;
+let posX = 0,
+  posY = 0;
+const delay = 0.1; // Adjust this for more or less delay (0.1 = slow, 1 = fast)
+
+document.addEventListener("mousemove", (e) => {
+  mouseX = e.clientX;
+  mouseY = e.clientY;
+});
+
+function animateCursor() {
+  posX += (mouseX - posX) * delay;
+  posY += (mouseY - posY) * delay;
+
+  cursor.style.left = `${posX}px`;
+  cursor.style.top = `${posY}px`;
+
+  requestAnimationFrame(animateCursor);
+}
+
+animateCursor();
+

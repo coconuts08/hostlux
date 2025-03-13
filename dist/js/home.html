@@ -13,13 +13,52 @@
       referrerpolicy="no-referrer"
     />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css">
     <style>
-      
+      body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+        .testimonial-container {
+            width: 80%;
+            margin: 50px auto;
+            padding: 41px;
+            background: transparent;
+            border-radius: 10px;
+        }
+        .swiper {
+            width: 100%;
+            height: auto;
+        }
+        .swiper-slide {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+        }
+        .testimonial-text {
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+        .testimonial-author {
+            font-weight: bold;
+            color: #555;
+        }
+        .swiper-button-next, .swiper-button-prev {
+            color: #000;
+        }
+        .swiper-pagination-bullet-active {
+          
+            background: #000;
+        }
   </style>
   </head>
   <body>
     <!--Header Start -->
-    <header class="header">
+    <header class="header pos">
       <div class="container">
         <div class="header__wrapper">
           <div class="branding">
@@ -153,7 +192,7 @@
       </div>
       
   
-          <div class="text-[40px] font-roboto font-bold text-dark md:text-[50px] md:gap-10">
+          <div class="text-[40px] font-roboto font-bold text-dark md:text-[50px] md:gap-10  ">
               <center>
                   <h2>Get more Powerful With Hostez <br> Website Hosting Plans</h2>
               </center>
@@ -219,7 +258,7 @@
   
     <!--Menu End  -->
 
-    <div class="container space-y-2 md:flex items-center gap-50">
+    <div class="container space-y-2 md:flex items-center gap-50" data-aos="fade-up">
       <div class="flex justify-end md:w-1/2">
         <img src="/dist/img/about-thumb.png" alt="" class="max-w-full h-auto">
       </div>
@@ -278,16 +317,25 @@
 
     <!-- end of pricing -->
 
-    <div class="relative">
-      <img src="/dist/img/category.jpg" alt="" class="h-[500px] md:h-[50vh] object-cover w-full" />
-  
-      <div class="container py-7 absolute md:top-[5%] md:mx-[10%]">
-          <div class="text-[32px] md:text-[40px] font-roboto font-bold text-dark text-center">
+
+
+    <!--Category-->
+    <div class="relative" data-aos="fade-up">
+      <img
+        src="/dist/img/category.jpg"
+        alt=""
+        class="h-[1000px] md:h-[40vh] object-cover w-full"
+      />
+      
+        
+
+        <div class="container absolute top-[10%] md:top-[2%] md:mx-[15%] ">
+          <div class="text-[32px] md:text-[40px] font-roboto font-bold text-light text-center ">
               <h2>More than 100+ Apps & Integrations</h2>
           </div>
   
           <!-- First Row -->
-          <div class="grid grid-cols-1 md:grid-cols-4 gap-1 md:place-items-center mt-6">
+          <div class="flex flex-col gap-2 md:flex md:flex-row  md:place-items-center mt-6 md:mx-[20%] md:gap-5">
               <div class="bg-light text-dark rounded-lg shadow-md md:max-w-[350px] border border-gray-200 transition-all duration-300 group hover:border-blue-500 hover:shadow-lg hover:shadow-blue-500/30">
                   <div class="p-5 flex items-center space-x-3">
                       <img src="/dist/img/pricing-icon-01.png" alt="" class="w-10 h-10 group-hover:animate-bounce" />
@@ -318,65 +366,528 @@
           </div>
   
           <!-- Second Row -->
-          <div class="grid grid-cols-1 md:grid-cols-3 gap-1 md:place-items-center mt-6">
-              <div class="bg-light text-dark rounded-lg shadow-md md:max-w-[350px] border border-gray-200 transition-all duration-300 group hover:border-blue-500 hover:shadow-lg hover:shadow-blue-500/30">
-                  <div class="p-5 flex items-center space-x-3">
-                      <img src="/dist/img/pricing-icon-01.png" alt="" class="w-10 h-10 group-hover:animate-bounce" />
-                      <h3 class="text-lg font-semibold group-hover:text-blue-500">Wordpress Hosting</h3>
-                  </div>
-              </div>
+          <div class="flex flex-col gap-2 md:flex md:flex-row  md:place-items-center mt-6 md:mx-[25%] md:gap-5">
+            <div class="bg-light text-dark rounded-lg shadow-md md:max-w-[350px] border border-gray-200 transition-all duration-300 group hover:border-blue-500 hover:shadow-lg hover:shadow-blue-500/30">
+                <div class="p-5 flex items-center space-x-3">
+                    <img src="/dist/img/pricing-icon-01.png" alt="" class="w-10 h-10 group-hover:animate-bounce" />
+                    <h3 class="text-lg font-semibold group-hover:text-blue-500">Wordpress Hosting</h3>
+                </div>
+            </div>
+
+            <div class="bg-light text-dark rounded-lg shadow-md md:max-w-[350px] border border-gray-200 transition-all duration-300 group hover:border-blue-500 hover:shadow-lg hover:shadow-blue-500/30">
+                <div class="p-5 flex items-center space-x-3">
+                    <img src="/dist/img/pricing-icon-02.png" alt="" class="w-10 h-10 group-hover:animate-bounce" />
+                    <h3 class="text-lg font-semibold group-hover:text-blue-500">Joomla Hosting</h3>
+                </div>
+            </div>
+
+            <div class="bg-light text-dark rounded-lg shadow-md md:max-w-[350px] border border-gray-200 transition-all duration-300 group hover:border-blue-500 hover:shadow-lg hover:shadow-blue-500/30">
+                <div class="p-5 flex items-center space-x-3">
+                    <img src="/dist/img/pricing-icon-03.png" alt="" class="w-10 h-10 group-hover:animate-bounce" />
+                    <h3 class="text-lg font-semibold group-hover:text-blue-500">Drupal Hosting</h3>
+                </div>
+            </div>
+
+        </div>
+        </div>
+        </div>
   
-              <div class="bg-light text-dark rounded-lg shadow-md md:max-w-[350px] border border-gray-200 transition-all duration-300 group hover:border-blue-500 hover:shadow-lg hover:shadow-blue-500/30">
-                  <div class="p-5 flex items-center space-x-3">
-                      <img src="/dist/img/pricing-icon-02.png" alt="" class="w-10 h-10 group-hover:animate-bounce" />
-                      <h3 class="text-lg font-semibold group-hover:text-blue-500">Joomla Hosting</h3>
-                  </div>
+   <!--Category end-->
+
+
+
+
+   <!--features-->
+
+
+
+
+
+
+   <div class="relative">
+    <img
+        src="/dist/img/feature_bg.jpg"
+        alt=""
+        class="h-[2100px] md:h-[100vh] object-cover w-full"
+    />
+
+    <div class="container py-7 absolute md:absolute top-[0%] md:top-[-4%] md:mx-[15%]">
+      
+    
+
+        <div class="text-[40px] font-roboto font-bold text-dark md:text-[50px] md:gap-10"data-aos="fade-up">
+            <center>
+                <h2>Get more Powerful With Hostez <br> Website Hosting Plans</h2>
+            </center>
+        </div>
+
+        <div class="cards grid grid-cols-1 md:grid-cols-3 gap-10 md:place-self-center md:text-center"data-aos="fade-up">
+          <div class="pricecards md:h-100 bg-light text-dark md:max-w-[615px] border-b-4 border-transparent transition-all duration-300 group hover:border-blue-500 hover:shadow-md hover:shadow-blue-500/50">
+              <div class="group text-left space-y-4 p-8">
+                <center> <img src="/dist/img/pricing-icon-01.png" alt="" class="group-hover:animate-bounce"/></center>
+               <center>   <h3 class="text-2xl font-bold">Maximum Performance</h3></center>
+               <center> <p class="text-2xl">Collaboratively formulate principle-centered capital. Progressively evolve users and it’s revolutionary human</p></center>
+                                  
               </div>
-  
-              <div class="bg-light text-dark rounded-lg shadow-md md:max-w-[350px] border border-gray-200 transition-all duration-300 group hover:border-blue-500 hover:shadow-lg hover:shadow-blue-500/30">
-                  <div class="p-5 flex items-center space-x-3">
-                      <img src="/dist/img/pricing-icon-03.png" alt="" class="w-10 h-10 group-hover:animate-bounce" />
-                      <h3 class="text-lg font-semibold group-hover:text-blue-500">Drupal Hosting</h3>
-                  </div>
+          </div>
+          <div class="pricecards bg-light text-dark md:max-w-[615px] border-b-4 border-transparent transition-all duration-300 group hover:border-blue-500 hover:shadow-md hover:shadow-blue-500/50"data-aos="fade-up">
+              <div class="group text-left space-y-4 p-8">
+                <center> <img src="/dist/img/pricing-icon-02.png" alt="" class="group-hover:animate-bounce"/></center>
+                 
+                <center> <h3 class="text-2xl font-bold">Powerful Security</h3></center>
+                <center>  <p class="text-2xl" >Collaboratively formulate principle-centered capital. Progressively evolve users and it’s revolutionary human</p></center>
+                
+                
+              </div>
+          </div>
+          <div class="pricecards bg-light text-dark md:max-w-[615px] border-b-4 border-transparent transition-all duration-300 group hover:border-blue-500 hover:shadow-md hover:shadow-blue-500/50">
+              <div class="group text-left space-y-4 p-8">
+                <center> <img src="/dist/img/pricing-icon-03.png" alt="" class="group-hover:animate-bounce"/></center>
+                  
+                <center>   <h3 class="text-2xl font-bold">Moneyback Gauranty</h3></center>
+                <center>  <p class="text-2xl">Collaboratively formulate principle-centered capital. Progressively evolve users and it’s revolutionary human</p></center>
+                 
+                  
+              </div>
+          </div>
+          <div class="pricecards md:h-100  bg-light text-dark md:max-w-[615px] border-b-4 border-transparent transition-all duration-300 group hover:border-blue-500 hover:shadow-md hover:shadow-blue-500/50">
+              <div class="group text-left space-y-4 p-8">
+                <center>  <img src="/dist/img/pricing-icon-04.png" alt="" class="group-hover:animate-bounce"/></center>
+                  
+                <center>  <h3 class="text-2xl font-bold">Speed Optimization</h3></center>
+                <center>  <p class="text-2xl">Collaboratively formulate principle-centered capital. Progressively evolve users and it’s revolutionary human</p></center>
+                  
+                
+              </div>
+          </div>
+          <div class="pricecards bg-light text-dark md:max-w-[615px] border-b-4 border-transparent transition-all duration-300 group hover:border-blue-500 hover:shadow-md hover:shadow-blue-500/50">
+              <div class="group text-left space-y-4 p-8">
+                <center>   <img src="/dist/img/pricing-icon-04.png" alt="" class="group-hover:animate-bounce"/></center>
+                  
+                <center>   <h3 class="text-2xl font-bold">FTP Supported</h3></center>
+                <center>  <p class="text-2xl">Collaboratively formulate principle-centered capital. Progressively evolve users and it’s revolutionary human</p></center>
+                  
+          
+              </div>
+          </div>
+          <div class="pricecards bg-light text-dark md:max-w-[615px] border-b-4 border-transparent transition-all duration-300 group hover:border-blue-500 hover:shadow-md hover:shadow-blue-500/50">
+              <div class="group text-left space-y-4 p-8">
+                <center>  <img src="/dist/img/pricing-icon-04.png" alt="" class="group-hover:animate-bounce"/></center>
+                  
+                <center>  <h3 class="text-2xl font-bold">Free Supports 24/7</h3></center>
+                <center>  <p class="text-2xl">Collaboratively formulate principle-centered capital. Progressively evolve users and it’s revolutionary human</p></center>
+                  
+                
               </div>
           </div>
       </div>
-  </div>
-  
-  
+      
+    </div>
+</div>
 
-    <!-- Footer -->
 
-    <div class="footer">
-      <div class="container">
-        <div class="footer__wrapper">
-          <div class="footer__socials border-t-1 border-t-orange-300">
-            <ul>
-              <li>
-                <a href=""><i class="fab fa-facebook"></i></a>
-                <a href=""><i class="fab fa-twitter"></i></a>
-                <a href=""><i class="fab fa-instagram"></i></a>
-                <a href=""><i class="fab fa-youtube"></i></a>
-              </li>
-            </ul>
+
+
+
+
+   
+   <!--features end-->
+
+
+   <!--Hosting-->
+
+   <div class="relative" >
+    <img
+      src="/dist/img/proved-bg.jpg"
+      alt=""
+      class="h-[1000px] md:h-[55vh] object-cover w-full"
+    />
+    
+    <div class="absolute top-[10%] md:top-[10%] md:mx-[20%]" data-aos="fade-up">
+      <div class="container space-y-2 md:flex items-center">
+        <div class="text-[40px]  font-roboto font-bold text-light md:text-[40px] md:gap-10">
+          <h1>
+            Migrating Hosting Another <br>Hosting Server’s
+          </h1>
+          <p class="font-normal md:text-[20px]">Collaboratively formulate principle-centered users and revolutionary human <br> capital. Progressively evolve domain and hosting pursue parallel platforms with inexpensive expertise completely</p>
+          
+          <div class="md:flex items-center space-x-4 gap-1">  
+            <a href="#_" class="relative inline-flex items-center justify-start px-6 py-3 overflow-hidden font-medium transition-all bg-lblue rounded hover:bg-lblue  group">
+              <span class="w-48 h-48 rotate-[-50deg] bg-orange-600 absolute bottom-0 left-0 -translate-x-full ease-out duration-500 transition-all translate-y-full mb-9 ml-9 group-hover:ml-0 group-hover:mb-32 group-hover:translate-x-0"></span>
+              <span class="relative w-full text-left text-light transition-colors duration-300 ease-in-out group-hover:text-white">Get started</span>
+          </a>
           </div>
         </div>
-
-        <div class="flex flex-col gap-3 md:flex md:flex-row md:justify-between">
-          <ul class="copyright">
-            <li><a href="">Web Accessibility</a></li>
-            <li><a href="">Privacy Policy</a></li>
-            <li><a href="">Terms of Use</a></li>
-            <li><a href=""></a>Site Map</li>
-            <li><a href=""></a>Cookie Preference</li>
-          </ul>
-
-          <span
-            >&copy; 2025 Starbucks Coffee COmpany. All rights reserved.</span
-          >
+        
+        <div class="flex justify-end md:w-1/2">
+          <img src="/dist/img/proved-thumb.png" alt="" class="max-w-full h-auto">
         </div>
       </div>
     </div>
+  </div>
+  
+
+
+
+   <!--Hosting-->
+
+
+
+
+<!--slider-->
+
+
+<div class="relative">
+  <img
+      src="/dist/img/pricing-bg.jpg"
+      alt=""
+      class="h-[1000px] md:h-[100vh] object-cover w-full"
+  />
+
+  <div class="container py-7 absolute md:absolute top-[1%] md:top-[%] md:mx-[15%]">
+    
+    
+<div class="container "data-aos="fade-up">
+  <div class="text-[20px] font-roboto font-bold text-dar md:text-[40px] md:gap-10 text-left md:flex">
+<h2>  What Saying Customer’s </h2>
+<p class="text-[15px] text-dark font-normal"><br>Collaboratively formulate principle-centered users and revolutionary human capital. Progressively evolve domain and hosting</p>
+<img src="/dist/img/rating_thumb.png" alt="">
+</div>
+
+<div class="testimonial-container ">
+  <div class="swiper mySwiper">
+     <div class="swiper-wrapper">
+    <div class="swiper-slide">
+      
+        <div class="testimonial-card">
+            <img src="/dist/img/testi_author1.png" alt="John Doe">
+            <p class="testimonial-author">- James Velasquez</p>
+            <p class="testimonial-text">"
+              Appropriately maintain installed base board sustainable
+              product. Compellingly dissemins diverse methods empowerment
+              whereas strategic theme areas
+            "</p>
+           
+        </div>
+    </div>
+    <div class="swiper-slide">
+        <div class="testimonial-card">
+            <img src="/dist/img/testi_author2.png" alt="Jane Smith">
+            <p class="testimonial-text">"
+              Appropriately maintain installed base board sustainable
+              product. Compellingly dissemins diverse methods empowerment
+              whereas strategic theme areas
+            "</p>
+            <p class="testimonial-author">- Jane Smith</p>
+        </div>
+    </div>
+    <div class="swiper-slide">
+        <div class="testimonial-card">
+            <img src="/dist/img/testi_author3.png" alt="Emily Johnson">
+            <p class="testimonial-text">"
+              Appropriately maintain installed base board sustainable
+              product. Compellingly dissemins diverse methods empowerment
+              whereas strategic theme areas
+            "</p>
+            <p class="testimonial-author">- Emily Johnson</p>
+        </div>
+    </div>
+    <div class="swiper-slide">
+        <div class="testimonial-card">
+            <img src="/dist/img/testi_author1.png" alt="John Doe">
+            <p class="testimonial-text">"
+              Appropriately maintain installed base board sustainable
+              product. Compellingly dissemins diverse methods empowerment
+              whereas strategic theme areas
+            ."</p>
+            <p class="testimonial-author">- John Doe</p>
+        </div>
+    </div>
+</div>
+
+      
+
+      <div class="swiper-pagination"></div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+<script>
+  var swiper = new Swiper(".mySwiper", {
+    slidesPerView: 1, /* Show 1 slide at a time on mobile */
+    spaceBetween: 10,
+    loop: true,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    breakpoints: {
+      768: {
+        slidesPerView: 1, /* Show 2 slides for tablets */
+        spaceBetween: 20,
+      },
+      1024: {
+        slidesPerView: 3, /* Show 3 slides for larger screens */
+        spaceBetween: 30,
+      }
+    }
+  });
+</script>
+                                      
+
+
+
+    
+  </div>
+</div>
+
+
+
+<!--slider-->
+
+
+
+<!--best hosting-->
+
+
+<div class="container space-y-2 md:flex items-center gap-50" data-aos="fade-up">
+  <div class="flex justify-end md:w-1/2">
+    <img src="/dist/img/faq-tumb.png" alt="" class="max-w-full h-auto">
+  </div>
+  <div class="max-w-2xl mx-auto px-6 md:px-10" >
+    <div class="text-[20px] font-roboto font-bold text-dar md:text-[40px] md:gap-10 text-center">
+        <h1>We’re Most Powerful and Best <br>Hosting Solution Agency</h1>
+        <p class="text-[16px] text-gray-700 mt-4">
+            Collaboratively formulate principle-centered users and revolutionary human new capital. 
+            Progressively evolve domain and hosting service.
+        </p>
+    </div>
+
+    <div
+        class="relative w-full bg-white px-6 pt-2 pb-2 shadow-xl ring-1 ring-gray-900/5 sm:rounded-lg">
+        <div class="mx-auto">
+            <div class="grid divide-y divide-neutral-200">
+                <div class="py-5">
+                    <details class="group">
+                        <summary class="flex cursor-pointer list-none items-center justify-between font-medium">
+                            <span> How to Transfer Hosting from Server?</span>
+                            <span class="transition group-open:rotate-180">
+                                <svg fill="none" height="24" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" width="24">
+                                    <path d="M6 9l6 6 6-6"></path>
+                                </svg>
+                            </span>
+                        </summary>
+                        <p class="group-open:animate-fadeIn mt-3 text-neutral-600">
+                          Collaboratively formulate principle-centered users and capital then evolve domain recaptiualize front-end results via viral vortals. Compellingly envisioneer front-end results world-class e-
+                        </p>
+                    </details>
+                </div>
+                <div class="py-5">
+                    <details class="group">
+                        <summary class="flex cursor-pointer list-none items-center justify-between font-medium">
+                            <span> How to Install WP Theme on a Hosting cPanel? </span>
+                            <span class="transition group-open:rotate-180">
+                                <svg fill="none" height="24" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" width="24">
+                                    <path d="M6 9l6 6 6-6"></path>
+                                </svg>
+                            </span>
+                        </summary>
+                        <p class="group-open:animate-fadeIn mt-3 text-neutral-600">
+                            We offer a 30-day money-back guarantee for most subscription plans.
+                        </p>
+                    </details>
+                </div>
+                <div class="py-5">
+                    <details class="group">
+                        <summary class="flex cursor-pointer list-none items-center justify-between font-medium">
+                            <span> What’s are the Best Hosting Server - 2025?</span>
+                            <span class="transition group-open:rotate-180">
+                                <svg fill="none" height="24" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" width="24">
+                                    <path d="M6 9l6 6 6-6"></path>
+                                </svg>
+                            </span>
+                        </summary>
+                        <p class="group-open:animate-fadeIn mt-3 text-neutral-600">
+                            To cancel your subscription, log in to your account and navigate to the subscription 
+                            management page.
+                        </p>
+                    </details>
+                      <a href="#_" class="relative inline-flex items-center justify-start px-6 py-3 overflow-hidden font-medium transition-all bg-lblue rounded hover:bg-lblue  group">
+                <span class="w-48 h-48 rotate-[-50deg] bg-orange-600 absolute bottom-0 left-0 -translate-x-full ease-out duration-500 transition-all translate-y-full mb-9 ml-9 group-hover:ml-0 group-hover:mb-32 group-hover:translate-x-0"></span>
+                <span class="relative w-full text-left text-light transition-colors duration-300 ease-in-out group-hover:text-white">Get started</span>
+            </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+  
+  
+</div>
+
+<!--best hosting-->
+
+<!--what saying-->
+
+<div class="container ">
+  <div class="text-[20px] font-roboto font-bold text-dar md:text-[40px] md:gap-10 text-center"data-aos="fade-up">
+<center><h2>  What Saying Customer’s </h2></center>
+<center><p>Collaboratively formulate principle-centered users and revolutionary human capital. Progressively evolve domain and hosting</p></center></div>
+
+<div class="container md:flex md:gap-6" data-aos="fade-up">
+<div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-light-800 dark:border-gray-700">
+  <a href="#">
+      <img class="rounded-t-lg" src="/dist/img/blog_thumb01.png" alt="" />
+  </a>
+  <div class="p-5">
+      <a href="#">
+          <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:lightBlue-white">Noteworthy technology acquisitions 2021</h5>
+      </a>
+      <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
+      <a href="#" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+          Read more
+           <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+          </svg>
+      </a>
+  </div>
+</div>
+<div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-light-800 dark:border-gray-700">
+  <a href="#">
+      <img class="rounded-t-lg" src="/dist/img/blog_thumb01.png" alt="" />
+  </a>
+  <div class="p-5">
+      <a href="#">
+          <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-lightBlue">Noteworthy technology acquisitions 2021</h5>
+      </a>
+      <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
+      <a href="#" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+          Read more
+           <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+          </svg>
+      </a>
+  </div>
+</div>
+<div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-light-800 dark:border-gray-700">
+  <a href="#">
+      <img class="rounded-t-lg" src="/dist/img/blog_thumb01.png" alt="" />
+  </a>
+  <div class="p-5">
+      <a href="#">
+          <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-lightBlue">Noteworthy technology acquisitions 2021</h5>
+      </a>
+      <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
+      <a href="#" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+          Read more
+           <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+          </svg>
+      </a>
+  </div>
+</div>
+
+</div>
+</div>
+<!--what saying-->
+<div class="cursor"></div>
+
+
+
+
+
+<footer
+      class="footer py-10"
+      style="background-image: url(/dist/img/footer_bg.jpg )"
+    >
+      <div class="container">
+        <div
+          class="footer__wrapper flex flex-col md:grid md:grid-cols-4 md:gap-20 text-light py-20 border-b-[1px] border-b-gray-600"
+          data-aos="fade-up"
+        >
+          <div class="right">
+            <img src="/dist/img/logo.png" alt="" class="mb-10" />
+            <p class="mb-10">
+              Collaboratively formulate principle-centered users <br />capital.
+              Progressively evolve domain and <br />hosting cultivate
+              revolutionary
+            </p>
+            <p class="mb-5 text-[18px] font-semibold flex items-center gap-2">
+              <span class="w-5 h-[2px] bg-blue-500 inline-block"></span> Follow
+              Us On
+            </p>
+            <ul class="icon flex gap-5">
+              <li class="icons"><i class="fab fa-facebook"></i></li>
+              <li class="icons"><i class="fab fa-x-twitter"></i></li>
+              <li class="icons"><i class="fab fa-linkedin"></i></li>
+              <li class="icons"><i class="fab fa-instagram"></i></li>
+            </ul>
+          </div>
+          <div class="mid1">
+            <h5>Quick Links</h5>
+            <ul>
+              <li><i class="fas fa-angles-right"></i> About Us</li>
+              <li><i class="fas fa-angles-right"></i> Support Center</li>
+              <li><i class="fas fa-angles-right"></i> Domain Search</li>
+              <li><i class="fas fa-angles-right"></i> My Account</li>
+              <li><i class="fas fa-angles-right"></i> Contact Us</li>
+            </ul>
+          </div>
+          <div class="mid2">
+            <h5>Quick Links</h5>
+            <ul>
+              <li><i class="fas fa-angles-right"></i> Cloud Hosting</li>
+              <li><i class="fas fa-angles-right"></i> VPS Hosting</li>
+              <li><i class="fas fa-angles-right"></i> Shared Hosting</li>
+              <li><i class="fas fa-angles-right"></i> WP Hosting</li>
+              <li><i class="fas fa-angles-right"></i> Web Hosting</li>
+            </ul>
+          </div>
+          <div class="left">
+            <h5>Latest Blog</h5>
+            <div class="form">
+              <div class="subscribe">
+                <p class="text-gray-500 text-[16px] mb-5 font-semibold">
+                  Subscribe Our Newsletter
+                </p>
+                <form action="">
+                  <input type="email" placeholder="Enter Your Email" />
+                  <button type="subscribe">Subscribe</button>
+                </form>
+              </div>
+
+              <h6 class="text-[18px] font-semibold my-5">Payment Gateway</h6>
+              <div class="cards flex gap-3 w-full">
+                <div class="payment">
+                  <img src="/dist/img/pyment-logo1.png" alt="" />
+                </div>
+                <div class="payment">
+                  <img src="/dist/img/pyment-logo2.png" alt="" />
+                </div>
+                <div class="payment">
+                  <img src="/dist/img/pyment-logo3.png" alt="" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="copyright text-center text-[16px] text-light">
+        <p>Copyright 2025 Host LuxAll Rights Reserved</p>
+      </div>
+    </footer>
+    
+
+
+
+
+
+
+
+
     <script src="/dist/js/script.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
